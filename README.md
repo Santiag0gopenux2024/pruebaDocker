@@ -35,7 +35,7 @@ NOTA: Todos los Dockerfiles deben llevar:
 4. Generar un docker stack con las siguientes caracteristicas:
 
 - **frontend:**
-    Este servicio debe subir como volumen la configuración de nginx, la que me debe permitir ingresar por https y http. Al ingresar por http, el servidor debe redirigirme a http.
+    Este servicio debe subir como volumen la configuración de nginx, la que me debe permitir ingresar por https y http. Al ingresar por http, el servidor debe redirigirme a https.
     Se deben usar los certificados creados en el paso 1 para el ssl y exponer los puerto necesarios para el funcionamiento.
     Este servicio no se puede comunicar de manera interna con ningún otro servicio
 
