@@ -15,7 +15,7 @@
     Este servicio necesita una imagen de 1 sola etapa la cual debe ser optimizada de tal manera que las dependencias sean cacheadas si no exiten cambios en el requirements.txt pero si en el código
 
 - **image-microservice:**
-    Este servicio está hecho con node, por lo que necesita una iamgen con 2 etapas y que arranque el microservicio
+    Este servicio está hecho con node, por lo que necesita una imagen con 2 etapas y que arranque el microservicio
 
 ~~~
 NOTA: Todos los Dockerfiles deben llevar:
@@ -39,7 +39,7 @@ NOTA: Todos los Dockerfiles deben llevar:
     Se deben usar los certificados creados en el paso 1 para el ssl y exponer los puerto necesarios para el funcionamiento.
     Este servicio no se puede comunicar de manera interna con ningún otro servicio
 
-- **bakend:**
+- **backend:**
     Este servicio solo necesita exponer los puertos necesarios y agregar las variables de entorno que están en el [archivo](./api/config/config.py)
     Además de esto, se podrá comunicar con las bases de datos y con el servicio de imagenes, esto teniendo en cuenta que el servicio de imagenes no podrá comunicarse con las bases de datos.
     El servicio tendrá que exponer el puerto 5000 escuchando en todas las interfaces de red
@@ -57,7 +57,7 @@ NOTA: Todos los Dockerfiles deben llevar:
     Tampoco necesitamos que exponga un puerto de la máquina
 
 ~~~
-La cantidad de recuros asignados, los determina el desarrollador (algo coherente) y necesitamos que tenga alta disponibilidad (tambien lo determina el desarrollador) en todos los servicios
+La cantidad de recursos asignados, los determina el desarrollador (algo coherente) y necesitamos que tenga alta disponibilidad (tambien lo determina el desarrollador) en todos los servicios
 
 Los servicios van a usar las imagenes guardadas en el registry
 ~~~
@@ -68,6 +68,6 @@ Los servicios van a usar las imagenes guardadas en el registry
 
 7. Ejecutar un comando que nos permita tener una mayor disponibilidad del servicio de backend, simulando que estamos recibiendo mucho tráfico y no podemos procesar tantas peticiones
 
-8. Tagear la imagen de frontend de latest a test y hacer el cambio de la imagen desde el archivo yaml
+8. Taggear la imagen de frontend de latest a test y hacer el cambio de la imagen desde el archivo yaml
 
-9. Tagear la imagen de backend de latest a test y hacer el cambio de la imagen desde la cli
+9. Taggear la imagen de backend de latest a test y hacer el cambio de la imagen desde la cli
