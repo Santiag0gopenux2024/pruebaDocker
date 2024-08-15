@@ -2,3 +2,4 @@
 **/docker-compose*
 **/node-modules
 docker-compose.yaml
+**/.dockerignore
