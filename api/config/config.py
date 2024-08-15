@@ -10,13 +10,10 @@ config = {
     "redis": {
         "host": os.getenv("REDIS_HOST", "localhost"),
         "port": os.getenv("REDIS_PORT", 6379),
-        "password": os.getenv("REDIS_PASSWORD", "")
     },
     "mongo": {
         "host": os.getenv("MONGO_HOST", "localhost"),
         "port": os.getenv("MONGO_PORT", 27017),
-        "user": os.getenv("MONGO_USER", "root"),
-        "password": os.getenv("MONGO_PASSWORD", ""),
     },
     "image_service": {
         "host": os.getenv("IMAGE_MICROSERVICE_HOST", "localhost"),
