@@ -2,8 +2,7 @@
 
 **Esta prueba tiene como objetivo evaluar las capacidades del desarrollador de Dockerizar e implementar una estructura de microservicios usando un orquestados (Docker compone) y exponer el aplicativo mediante un servidor web de NGINX**
 
-1. Generar certificados autofirmados para la empresa "GopenuxLab" la cuál opera en Cúcuta, Norte de Santander y cubre todos los subdominios de developers.lan
-2. Genera un Dockerfile para cada uno de los servicios con las siguientes caracteristicas:
+1. Genera un Dockerfile para cada uno de los servicios con las siguientes caracteristicas:
 - **frontend:**
     Este es un microservicio en react.
 
@@ -13,7 +12,7 @@
 - **image-microservice:**
     Este servicio está hecho con node
 
-3. Generar un docker stack con las siguientes caracteristicas:
+2. Generar un docker compose con las siguientes caracteristicas:
 
 - **frontend:**
     Este servicio debe subir como volumen la configuración de nginx, la que me debe permitir ingresar por http al frontend.
