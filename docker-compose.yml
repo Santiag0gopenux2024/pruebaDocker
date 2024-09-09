@@ -1,4 +1,15 @@
 services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - '80:80'
+    volumes:
+      - ./nginx.conf/nginx.conf:/etc/nginx/nginx.conf
+    networks:
+      - frontend_network
+
   backend:
     build:
       context: ./api
@@ -41,6 +52,8 @@ services:
       - backend-network
 
 networks:
+  frontend_network:
+    driver: bridge
   backend-network:
     driver: bridge
 
